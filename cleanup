@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Recursively find and remove __pycache__ directories
+find . -type d -name "__pycache__" -exec rm -rf {} +
+# Recursively remove json files
+find . -type f -name "*.json" -exec rm -f {} +
