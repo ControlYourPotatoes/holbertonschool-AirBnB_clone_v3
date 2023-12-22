@@ -9,8 +9,10 @@ app = Flask(__name__)
 
 @app.route('/api/v1/states', methods=['GET'])
 def get_states():
-    states = storage.all(State)
-    state_list = [state.to_dict() for state in states.values()]
+    states = storage.all(State).values()
+    state_list = []
+    for state in states:
+        state_list.append(state.to_dict())
     return jsonify(state_list)
 
 
@@ -33,7 +35,7 @@ def delete_state(state_id):
 
 
 @app.route('/api/v1/states', methods=['POST'])
-def create_state():
+def post_state():
     if not request.json:
         abort(400, 'Not a JSON')
     if 'name' not in request.json:
@@ -45,7 +47,7 @@ def create_state():
 
 
 @app.route('/api/v1/states/<state_id>', methods=['PUT'])
-def update_state(state_id):
+def put_state(state_id):
     state = storage.get(State, state_id)
     if state is None:
         abort(404)
