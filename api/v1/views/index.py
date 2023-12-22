@@ -4,9 +4,11 @@ from flask import jsonify
 from api.v1.views import app_views
 from models import storage
 
+
 @app_views.route('/status', methods=['GET'])
 def get_status():
     return jsonify({"status": "OK"})
+
 
 @app_views.route('/stats', methods=['GET'])
 def get_stats():
@@ -19,4 +21,3 @@ def get_stats():
         "users": storage.count("User")
     }
     return jsonify(stats)
-
