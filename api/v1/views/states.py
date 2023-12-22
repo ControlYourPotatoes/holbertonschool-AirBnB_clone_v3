@@ -8,7 +8,7 @@ from api.v1.views import app_views
 app = Flask(__name__)
 
 
-@app.route('/api/v1/states', methods=['GET'])
+@app_views.route('/api/v1/states', methods=['GET'])
 def get_states():
     states = storage.all(State).values()
     state_list = []
@@ -17,7 +17,7 @@ def get_states():
     return jsonify(state_list)
 
 
-@app.route('/api/v1/states/<state_id>', methods=['GET'])
+@app_views.route('/api/v1/states/<state_id>', methods=['GET'])
 def get_state(state_id):
     state = storage.get(State, state_id)
     if state is None:
@@ -25,7 +25,7 @@ def get_state(state_id):
     return jsonify(state.to_dict())
 
 
-@app.route('/api/v1/states/<state_id>', methods=['DELETE'])
+@app_views.route('/api/v1/states/<state_id>', methods=['DELETE'])
 def delete_state(state_id):
     state = storage.get(State, state_id)
     if state is None:
@@ -35,7 +35,7 @@ def delete_state(state_id):
     return jsonify({}), 200
 
 
-@app.route('/api/v1/states', methods=['POST'])
+@app_views.route('/api/v1/states', methods=['POST'])
 def post_state():
     if not request.json:
         abort(400, 'Not a JSON')
@@ -47,7 +47,7 @@ def post_state():
     return jsonify(state.to_dict()), 201
 
 
-@app.route('/api/v1/states/<state_id>', methods=['PUT'])
+@app_views.route('/api/v1/states/<state_id>', methods=['PUT'])
 def put_state(state_id):
     state = storage.get(State, state_id)
     if state is None:
