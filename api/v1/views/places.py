@@ -117,8 +117,8 @@ def places_search():
             list_places = storage.all(Place).values()
         amenities_obj = [storage.get(Amenity, a_id) for a_id in amenities]
         list_places = [place for place in list_places
-                       if all([ama in place.amenities
-                               for ama in amenities_obj])]
+                       if all([aman in place.amenities
+                               for aman in amenities_obj])]
     places = []
     for pla in list_places:
         dic = pla.to_dict()
