@@ -1,0 +1,17 @@
+/home/puga/.local/lib/python3.8/site-packages/pep8.py:110: FutureWarning: Possible nested set at position 1
+  EXTRANEOUS_WHITESPACE_REGEX = re.compile(r'[[({] | []}),;:]')
+..............F..........................ssssss.................................................................
+======================================================================
+FAIL: test_datetime_attributes (test_models.test_base_model.TestBaseModel)
+Test that two BaseModel instances have different datetime objects
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/puga/Documents/holbertonschool-AirBnB_clone_v3/tests/test_models/test_base_model.py", line 88, in test_datetime_attributes
+    self.assertTrue(tic <= inst1.created_at <= toc)
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 112 tests in 0.185s 
+
+FAILED (failures=1, skipped=6)
+{'id': '0f1f2abd-5231-4a85-b4ed-44fa129ef941', 'created_at': datetime.datetime(2023, 12, 23, 3, 9, 11, 178306), 'updated_at': datetime.datetime(2023, 12, 23, 3, 9, 11, 178306)}
