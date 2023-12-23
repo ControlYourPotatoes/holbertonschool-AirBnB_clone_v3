@@ -1,0 +1,20 @@
+/home/puga/.local/lib/python3.8/site-packages/pep8.py:110: FutureWarning: Possible nested set at position 1
+  EXTRANEOUS_WHITESPACE_REGEX = re.compile(r'[[({] | []}),;:]')
+/home/puga/Documents/holbertonschool-AirBnB_clone_v3/tests/test_models/test_amenity.py:87: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if attr is not "_sa_instance_state":
+/home/puga/Documents/holbertonschool-AirBnB_clone_v3/tests/test_models/test_city.py:95: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if attr is not "_sa_instance_state":
+/home/puga/Documents/holbertonschool-AirBnB_clone_v3/tests/test_models/test_place.py:181: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if attr is not "_sa_instance_state":
+/home/puga/Documents/holbertonschool-AirBnB_clone_v3/tests/test_models/test_review.py:104: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if attr is not "_sa_instance_state":
+/home/puga/Documents/holbertonschool-AirBnB_clone_v3/tests/test_models/test_state.py:86: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if attr is not "_sa_instance_state":
+/home/puga/Documents/holbertonschool-AirBnB_clone_v3/tests/test_models/test_user.py:113: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if attr is not "_sa_instance_state":
+.........................................ssssss.................................................................
+----------------------------------------------------------------------
+Ran 112 tests in 0.208s
+
+OK (skipped=6)
+{'id': '41d9ab81-80c9-4dfd-b763-1344168dc0a4', 'created_at': datetime.datetime(2023, 12, 23, 3, 15, 18, 398712), 'updated_at': datetime.datetime(2023, 12, 23, 3, 15, 18, 398712)}
